@@ -16,18 +16,34 @@ class ContactController extends Controller
         $this->contactService = $contactService;
     }
 
+    /**
+     * 一覧画面
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {   
         $contacts = $this->contactService->getContacts();
         return view('contact.index',compact('contacts'));
     }
 
+    /**
+     * 新規作成画面
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
         $departments = $this->contactService->getDepartments();
         return view('contact.create', compact('departments'));
     }
 
+    /**
+     * 新規作成処理
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(ContactRequest $request)
     {
         DB::transaction(function() use ($request){

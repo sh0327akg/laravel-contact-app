@@ -17,11 +17,6 @@
                 </div>
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="text-gray-900">
-                        <a href="{{ route('contact.create')}}">
-                            <div class="p-2 w-full">
-                                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">お問合せフォーム</button>
-                            </div>
-                        </a>
                         <div class="lg:w-2/3 w-full mx-auto overflow-auto mb-2">
                             <table class="table-auto w-full text-left whitespace-no-wrap">
                                 <thead>
@@ -46,6 +41,11 @@
                                 </tbody>
                             </table>
                         </div>
+                        <a href="{{ route('contact.create')}}">
+                            <div class="p-2 w-full">
+                                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">問い合わせる</button>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

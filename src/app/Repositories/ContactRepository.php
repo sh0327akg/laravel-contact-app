@@ -10,16 +10,31 @@ use Illuminate\Database\Eloquent\Collection;
 
 class ContactRepository implements ContactRepositoryInterface
 {
+  /**
+   * @return Collection
+   */
   public function getDepartmentsIds(): Collection
   {
     return Department::select('id','name')->get();
   }
 
+  /**
+   * @return Collection
+   */
   public function getContactsColumns(): Collection
   {
     return Contact::select('department_id', 'name', 'gender', 'age', 'email', 'content')->get();
   }
 
+  /**
+   * @param int $departmentId
+   * @param string $name
+   * @param string $email
+   * @param string $content
+   * @param int $age
+   * @param int $gender
+   * @return Contact
+   */
   public function createContactInstance(int $departmentId, string $name, string $email, string $content, int $age, int $gender): Contact
   {
     return Contact::create([
