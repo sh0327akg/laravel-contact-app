@@ -13,7 +13,7 @@
         <section class="body-font relative">
             <div class="container py-5 mt-5 mx-auto">
                 <div class="text-center w-full mb-12">
-                    <h1 class="sm:text-3xl text-2xl title-font">お問合せ</h1>
+                    <h1 class="sm:text-3xl text-2xl title-font">新規問合せ</h1>
                 </div>
                 @if ($errors->any())
                     <div class='text-red-600'>

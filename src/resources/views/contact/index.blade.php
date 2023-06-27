@@ -13,7 +13,7 @@
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="text-center w-full mb-7">
-                    <h1 class="sm:text-3xl text-2xl title-font">お問合せ</h1>
+                    <h1 class="sm:text-3xl text-2xl title-font">お問合せ一覧</h1>
                 </div>
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="text-gray-900">
@@ -31,23 +31,23 @@
                                 <tbody>
                                     @foreach($contacts as $contact)
                                     <tr>
-                                        <td class="border-gray-200 px-4 py-3">{{ $contact->department->name }}</td>
-                                        <td class="border-gray-200 px-4 py-3">{{ $contact->name }}</td>
-                                        <td class="border-gray-200 px-4 py-3">{{ $contact->gender }}</td>
-                                        <td class="border-gray-200 px-4 py-3">{{ $contact->email }}</td>
-                                        <td class="border-gray-200 px-4 py-3 text-lg text-gray-900">{{ $contact->content }}</td>
+                                        <td class="border-gray-300 px-4 py-3">{{ $contact->department->name }}</td>
+                                        <td class="border-gray-300 px-4 py-3">{{ $contact->name }}</td>
+                                        <td class="border-gray-300 px-4 py-3">{{ $contact->gender }}</td>
+                                        <td class="border-gray-300 px-4 py-3">{{ $contact->email }}</td>
+                                        <td class="border-gray-300 px-4 py-3 text-gray-900">{{ $contact->content }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
                             </table>
                         </div>
-                        <a href="{{ route('contact.create')}}">
-                            <div class="p-2 w-full">
-                                <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">問い合わせる</button>
-                            </div>
-                        </a>
                     </div>
                 </div>
+                <a href="{{ route('contact.create')}}">
+                    <div class="p-2 w-full mt-4">
+                        <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">問い合わせる</button>
+                    </div>
+                </a>
             </div>
         </div>
     </body>
